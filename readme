@@ -9,3 +9,23 @@ by submitting the form it will add the keys and values in .env file
 you can also get the it in json format by 
 adding first on the .env variable and value in object and then using json.stringigy(object)
 it will show the keys and value pair  .
+
+how to get json update value :
+
+const fs = require('fs');
+const readline = require('readline')
+
+ var obj ={}
+ var rd = readline.createInterface({
+    input: fs.createReadStream('.env'),
+    
+});
+var value;var count=0;
+rd.on('line', function(line) {
+   var arr = line.split(" ");
+    console.log(arr);
+    obj[arr[0]] = arr[2];
+});
+
+var json = JSON.stringify(obj);
+console.log(json);
