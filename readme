@@ -1,0 +1,11 @@
+this is api used to add and see the varibles in .env file
+
+this runs on the localhost : 5000
+
+.env file contains password and api keys of databases and other secrect info that you don't want to others to see
+
+you can add keys and value pair in forms created on .hbs handlebars
+by submitting the form it will add the keys and values in .env file 
+you can also get the it in json format by 
+adding first on the .env variable and value in object and then using json.stringigy(object)
+it will show the keys and value pair  .
